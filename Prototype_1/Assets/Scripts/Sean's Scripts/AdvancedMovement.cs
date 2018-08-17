@@ -14,7 +14,7 @@ public class AdvancedMovement : MonoBehaviour
     int moveForce = 150;         // strength of push used for movement
 
     // jumping movement controls
-    float jumpForce = 1000;       // strength of push used for jumping
+    int jumpForce = 1250;       // strength of push used for jumping
     bool jumping = false;       // has the object used jump
     bool doubleJumping = false; // has the object used double jump
 
@@ -46,17 +46,21 @@ public class AdvancedMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && (!jumping || !doubleJumping))
         {
             //rigbody.velocity = 0;
-            
+            rigbody.AddForce(0, jumpForce, 0);
             if (!jumping)
             {
-                rigbody.AddForce(0, jumpForce, 0);
                 jumping = true;
             }
             else
             {
-                rigbody.AddForce(0, jumpForce*1.5f, 0);
                 doubleJumping = true;
             }
+        }
+        // forward movement
+        if (Input.GetKey("w") && rigbody.velocity[2] < maxVelocity)
+        {
+            rigbody.AddForce(0, 0, moveForce);
+            Debug.Log(rigbody.velocity);
         }
         // ground pound movement
         if (Input.GetKey("s") && (jumping || doubleJumping))
@@ -74,7 +78,7 @@ public class AdvancedMovement : MonoBehaviour
         {
             if (CheckTime(lastD) < 0.5)
             {
-                rigbody.AddForce(jumpForce*2, 0, 0);
+                rigbody.AddForce(jumpForce * 5, 0, 0);
             }
             else
             {
@@ -86,12 +90,11 @@ public class AdvancedMovement : MonoBehaviour
         {
             rigbody.AddForce(-moveForce, 0, 0);
         }
-        // left dash
         if (Input.GetKeyDown("a"))
         {
             if (CheckTime(lastA) < 0.5)
             {
-                rigbody.AddForce(-jumpForce*2, 0, 0);
+                rigbody.AddForce(-jumpForce * 5, 0, 0);
             }
             else
             {
