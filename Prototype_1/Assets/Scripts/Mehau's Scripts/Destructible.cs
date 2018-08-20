@@ -11,7 +11,7 @@ public class Destructible : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision collision){
-		if(collision.impactForceSum.magnitude > 0.1f){
+		if(collision.impactForceSum.magnitude > 10f){
 			DestroyMe();
 		}
 	}
