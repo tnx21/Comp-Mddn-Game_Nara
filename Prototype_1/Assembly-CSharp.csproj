@@ -108,6 +108,7 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\Mehau's Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\Mehau's Scripts\Dash_sound.cs" />
+    <Compile Include="Assets\Scripts\Mehau's Scripts\Destructible.cs" />
     <Compile Include="Assets\Scripts\Mehau's Scripts\Force.cs" />
     <Compile Include="Assets\Scripts\Mehau's Scripts\Jump.cs" />
     <Compile Include="Assets\Scripts\Mehau's Scripts\Jump_gravity.cs" />
@@ -159,16 +160,16 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Volumes/MEHAUS USB/mddn/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Volumes/MEHAUS USB/mddn/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Volumes/MEHAUS USB/mddn/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Volumes/MEHAUS USB/mddn/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
