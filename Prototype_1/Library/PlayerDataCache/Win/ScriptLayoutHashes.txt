@@ -1,7 +1,11 @@
 WindowsStandalone
 PlayerPath?
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:/Users/Mehau/Desktop/Comp-Mddn-Game/Prototype_1/Windows/Prototype_1.exe
+=======
+C:/Users/Mehau/Desktop/Gamist/Prototype_1.exe
+>>>>>>> 3bb806c3a8f8bd6c717620e6d84623dc47189ebb
 =======
 C:/Users/Mehau/Desktop/Gamist/Prototype_1.exe
 >>>>>>> 3bb806c3a8f8bd6c717620e6d84623dc47189ebb
