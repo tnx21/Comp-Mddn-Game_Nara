@@ -361,6 +361,7 @@
     <Compile Include="Assets\Scripts\Sean&apos;s Scripts\PointerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean&apos;s Scripts\SeanMovement.cs" />
     <Compile Include="Assets\Scripts\Waseem&apos;s Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Waseem&apos;s Scripts\PauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
