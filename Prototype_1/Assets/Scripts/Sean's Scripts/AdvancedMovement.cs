@@ -65,6 +65,7 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(0, jumpForce * 1.25f, 0);
                 doubleJumping = true;
             }
+            FindObjectOfType<AudioManager>().Play("Jump_Sound");
         }
         // ground pound movement
         if (Input.GetKey("s") && (jumping || doubleJumping))
