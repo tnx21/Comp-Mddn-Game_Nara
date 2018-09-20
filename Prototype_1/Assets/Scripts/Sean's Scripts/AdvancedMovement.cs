@@ -10,11 +10,13 @@ public class AdvancedMovement : MonoBehaviour
     Rigidbody rigbody;          // this body is used to apply directional force 
 
     // basic movement controls
-    int maxVelocity = 10;        // max speed of the object
+    [Range(0, 30)]
+    public int maxVelocity = 10;        // max speed of the object
     int moveForce = 150;         // strength of push used for movement
 
     // jumping movement controls
-    float jumpForce = 1000f;       // strength of push used for jumping
+    [Range(0f, 3000f)]
+    public float jumpForce = 1000f;       // strength of push used for jumping
     bool jumping = false;       // has the object used jump
     bool doubleJumping = false; // has the object used double jump
 
@@ -22,7 +24,11 @@ public class AdvancedMovement : MonoBehaviour
     float lastA = -3;   // used for timing double tap in dash
     float lastD = -3;   // used for timing double tap in dash
     bool dashing = false;  // is object dashing
-    float dashTimer = -3; // when dash was used last
+    [Range(0f, 3000f)]
+    public float dashForce = 1000f; // strength of push used for dashing
+    [Range(0f, 5f)]
+    public float dashCoolDown = 3;
+    float dashTimer = -10; // when dash was used last
     float dashMulti = 2.5f; // multiplier used to multiply jumpForce in the dash movements
 
     // Checks if the player touches a platform and resets jumping capability if they do
@@ -81,9 +87,9 @@ public class AdvancedMovement : MonoBehaviour
         // right dash
         if (Input.GetKeyDown("d"))
         {   
-            if (CheckTime(lastD) < 0.25 && CheckTime(dashTimer) > 3)
+            if (CheckTime(lastD) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
-                rigbody.AddForce(jumpForce*dashMulti, 0, 0);
+                rigbody.AddForce(dashForce, 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
             }
@@ -100,9 +106,9 @@ public class AdvancedMovement : MonoBehaviour
         // left dash
         if (Input.GetKeyDown("a"))
         {
-            if (CheckTime(lastA) < 0.25 && CheckTime(dashTimer) > 3)
+            if (CheckTime(lastA) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
-                rigbody.AddForce(-jumpForce*dashMulti, 0, 0);
+                rigbody.AddForce(-dashForce, 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
             }
