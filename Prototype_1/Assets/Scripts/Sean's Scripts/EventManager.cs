@@ -6,12 +6,11 @@ using UnityEngine.Events;
 public class EventManager : MonoBehaviour {
 
 	private Dictionary <string, UnityEvent> eventDictionary;
-
-	private EventManager eventManager;
+ 
+	//private EventManager eventManager;
 
 	//public static EventManager instance {
 	//	get {
-			
 	//	}
 	//}
 
