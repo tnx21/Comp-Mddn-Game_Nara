@@ -9,11 +9,11 @@ public class EventManager : MonoBehaviour {
 
 	private EventManager eventManager;
 
-	public static EventManager instance {
-		get {
+	//public static EventManager instance {
+	//	get {
 			
-		}
-	}
+	//	}
+	//}
 
 	// Use this for initialization
 	void Start () {

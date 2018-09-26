@@ -117,7 +117,9 @@
     <Compile Include="Assets\Scripts\Mehau's Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Mehau's Scripts\Platform_script.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\AdvancedMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\animController.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\PointerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\SeanMovement.cs" />
     <Compile Include="Assets\Scripts\Waseem's Scripts\MainMenu.cs" />
