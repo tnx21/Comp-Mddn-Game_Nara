@@ -61,6 +61,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Blockout\Editor\AutoPrefabSelection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutCommentSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutDatabase.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorAssetsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorCameraAnchorSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorCommentsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorHelper.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorHierarchyToolsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorOthersSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorScalableObjectsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorScopes.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorSettings.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorSuggestedSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorTransformSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorWindow.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutGridSnapping.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutStaticFunctions.cs" />
+    <Compile Include="Assets\Blockout\Editor\BockoutEditorSplashSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\CommentBoxSceneGUI.cs" />
+    <Compile Include="Assets\Blockout\Editor\CommentExplorer.cs" />
+    <Compile Include="Assets\Blockout\Editor\CommentExplorerWindowTab.cs" />
+    <Compile Include="Assets\Blockout\Editor\CreateBlockoutPrefabWizzard.cs" />
+    <Compile Include="Assets\Blockout\Editor\EditorHotkeysTracker.cs" />
+    <Compile Include="Assets\Blockout\Editor\EditorObjExporter.cs" />
+    <Compile Include="Assets\Blockout\Editor\EUIResourceManager.cs" />
+    <Compile Include="Assets\Blockout\Editor\NotepadEditor.cs" />
+    <Compile Include="Assets\Blockout\Editor\ThemeDefinition.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\AddObjectPopup.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\BrushCollection.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\BrushObject.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\GameObjectBrushEditor.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\StringPopupDialog.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -96,16 +129,16 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

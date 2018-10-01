@@ -1,5 +1,118 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=3079 outsize=302 ok=1
+Cmd: preprocess
+  insize=3466 outsize=1210 ok=1
+Cmd: preprocess
+  insize=2963 outsize=388 ok=1
+Cmd: preprocess
+  insize=3508 outsize=1607 ok=1
+Cmd: preprocess
+  insize=28911 outsize=7147 ok=1
+Cmd: preprocess
+  insize=2542 outsize=276 ok=1
+Cmd: preprocess
+  insize=4019 outsize=2622 ok=1
+Cmd: preprocess
+  insize=2582 outsize=368 ok=1
+Cmd: preprocess
+  insize=23838 outsize=4396 ok=1
+Cmd: preprocess
+  insize=23224 outsize=10892 ok=1
+Cmd: preprocess
+  insize=4193 outsize=2547 ok=1
+Cmd: preprocessCompute
+  insize=1382 outsize=1386 ok=1
+Cmd: preprocess
+  insize=3464 outsize=1257 ok=1
+Cmd: preprocess
+  insize=3618 outsize=353 ok=1
+Cmd: preprocess
+  insize=5780 outsize=1782 ok=1
+Cmd: preprocessCompute
+  insize=3176 outsize=3182 ok=1
+Cmd: preprocess
+  insize=2188 outsize=281 ok=1
+Cmd: preprocess
+  insize=31310 outsize=1466 ok=1
+Cmd: preprocess
+  insize=4623 outsize=2701 ok=1
+Cmd: preprocess
+  insize=10047 outsize=3838 ok=1
+Cmd: preprocess
+  insize=2601 outsize=1305 ok=1
+Cmd: preprocess
+  insize=7066 outsize=798 ok=1
+Cmd: preprocess
+  insize=934 outsize=280 ok=1
+Cmd: preprocess
+  insize=6596 outsize=467 ok=1
+Cmd: preprocess
+  insize=3433 outsize=2546 ok=1
+Cmd: preprocess
+  insize=1868 outsize=283 ok=1
+Cmd: preprocess
+  insize=11336 outsize=651 ok=1
+Cmd: preprocess
+  insize=2431 outsize=469 ok=1
+Cmd: preprocess
+  insize=4145 outsize=528 ok=1
+Cmd: preprocess
+  insize=25329 outsize=11210 ok=1
+Cmd: preprocessCompute
+  insize=1480 outsize=1484 ok=1
+Cmd: preprocess
+  insize=7090 outsize=2362 ok=1
+Cmd: preprocess
+  insize=11846 outsize=3605 ok=1
+Cmd: preprocess
+  insize=5415 outsize=2548 ok=1
+Cmd: preprocess
+  insize=1652 outsize=347 ok=1
+Cmd: preprocess
+  insize=5144 outsize=2947 ok=1
+Cmd: preprocess
+  insize=7715 outsize=2629 ok=1
+Cmd: preprocess
+  insize=2307 outsize=1077 ok=1
+Cmd: preprocess
+  insize=3309 outsize=229 ok=1
+Cmd: preprocess
+  insize=5424 outsize=2745 ok=1
+Cmd: preprocess
+  insize=10039 outsize=3828 ok=1
+Cmd: preprocess
+  insize=21388 outsize=15553 ok=1
+Cmd: preprocessCompute
+  insize=2283 outsize=2285 ok=1
+Cmd: preprocess
+  insize=29644 outsize=7695 ok=1
+Cmd: preprocess
+  insize=3314 outsize=1461 ok=1
+Cmd: preprocess
+  insize=1893 outsize=901 ok=1
+Cmd: preprocess
+  insize=4252 outsize=3548 ok=1
+Cmd: preprocess
+  insize=7098 outsize=2372 ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=84497 outsize=4608 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _TERRAIN_NORMAL_MAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=84497 outsize=16919 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _TERRAIN_NORMAL_MAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=14 type=0 insize=84497 outsize=4664 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _TERRAIN_NORMAL_MAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=84497 outsize=17050 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _TERRAIN_NORMAL_MAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=84497 outsize=4337 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_COMBINED _TERRAIN_NORMAL_MAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=84497 outsize=13847 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_COMBINED _TERRAIN_NORMAL_MAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler

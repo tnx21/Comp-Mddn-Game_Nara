@@ -63,6 +63,21 @@
   <ItemGroup>
     <Compile Include="Assets\Audio\Sound.cs" />
     <Compile Include="Assets\AudioManager.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutCommentInGameGUI.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutHelper.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutParticleHelper.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutPinGizmo.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutRulerObject.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutSceneSettings.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutSceneViewCubeGizmo.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutSection.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutTrigger.cs" />
+    <Compile Include="Assets\Blockout\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Blockout\Scripts\CollectionTrigger.cs" />
+    <Compile Include="Assets\Blockout\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Blockout\Scripts\JumpPad.cs" />
+    <Compile Include="Assets\Blockout\Scripts\Notepad.cs" />
+    <Compile Include="Assets\Blockout\Scripts\RotateObject.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -125,6 +140,7 @@
     <Compile Include="Assets\Scripts\Waseem's Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Waseem's Scripts\PauseMenu.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Base.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -132,18 +148,23 @@
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Blockout_Pin_Shader.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Pin_Backfacing.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Comment_Shader.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Leaf.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Depth_Blend.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
@@ -151,12 +172,16 @@
     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Gate_Particle.shader" />
     <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Area_Comment_Wireframe.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Ruler\Ruler_Shader.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Tri.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
@@ -167,6 +192,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Water.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -179,20 +205,21 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Editor_Trigger.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
