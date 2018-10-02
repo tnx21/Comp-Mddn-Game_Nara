@@ -138,11 +138,23 @@ public class AdvancedMovement : MonoBehaviour
         {
             isMoving = true;
         }
-
         if (!Input.GetKey("a") && !Input.GetKey("d"))
         {
             isMoving = false;
         }
+
+        Quaternion right = Quaternion.Euler(0f, 0f, 0f);
+        Quaternion left = Quaternion.Euler(0f, 180f, 0f);
+
+        if (Input.GetKey("a"))
+        {
+            transform.rotation = Quaternion.Lerp(right, left, Time.time * 3);
+        }
+        else if (Input.GetKey("d"))
+        {
+            transform.rotation = Quaternion.Lerp(left, right, Time.time * 3);
+        }
+
 
         if (isMoving)
         {
