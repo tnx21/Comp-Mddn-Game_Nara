@@ -374,6 +374,18 @@
     <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_UGUI_Private.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Blockout_Pin_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Pin_Backfacing.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Ruler\Ruler_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Area_Comment_Wireframe.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Comment_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Depth_Blend.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Leaf.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Base.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Tri.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Water.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Editor_Trigger.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Gate_Particle.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

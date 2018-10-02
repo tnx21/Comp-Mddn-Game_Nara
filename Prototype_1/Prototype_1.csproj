@@ -303,6 +303,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Audio\Sound.cs" />
+    <Compile Include="Assets\AudioManager.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutCommentInGameGUI.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutHelper.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutParticleHelper.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutPinGizmo.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutRulerObject.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutSceneSettings.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutSceneViewCubeGizmo.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutSection.cs" />
+    <Compile Include="Assets\Blockout\Scripts\BlockoutTrigger.cs" />
+    <Compile Include="Assets\Blockout\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Blockout\Scripts\CollectionTrigger.cs" />
+    <Compile Include="Assets\Blockout\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Blockout\Scripts\JumpPad.cs" />
+    <Compile Include="Assets\Blockout\Scripts\Notepad.cs" />
+    <Compile Include="Assets\Blockout\Scripts\RotateObject.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -357,13 +374,27 @@
     <Compile Include="Assets\Scripts\Mehau&apos;s Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Mehau&apos;s Scripts\Platform_script.cs" />
     <Compile Include="Assets\Scripts\Sean&apos;s Scripts\AdvancedMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean&apos;s Scripts\animController.cs" />
     <Compile Include="Assets\Scripts\Sean&apos;s Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean&apos;s Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\Sean&apos;s Scripts\PointerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean&apos;s Scripts\SeanMovement.cs" />
     <Compile Include="Assets\Scripts\Waseem&apos;s Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Waseem&apos;s Scripts\PauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Blockout_Pin_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Pin_Backfacing.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Ruler\Ruler_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Area_Comment_Wireframe.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Comment_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Depth_Blend.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Leaf.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Base.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Tri.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Water.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Editor_Trigger.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Gate_Particle.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

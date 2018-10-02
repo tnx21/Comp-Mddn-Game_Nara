@@ -364,6 +364,39 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Blockout\Editor\AutoPrefabSelection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutCommentSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutDatabase.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorAssetsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorCameraAnchorSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorCommentsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorHelper.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorHierarchyToolsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorOthersSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorScalableObjectsSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorScopes.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorSettings.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorSuggestedSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorTransformSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutEditorWindow.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutGridSnapping.cs" />
+    <Compile Include="Assets\Blockout\Editor\BlockoutStaticFunctions.cs" />
+    <Compile Include="Assets\Blockout\Editor\BockoutEditorSplashSection.cs" />
+    <Compile Include="Assets\Blockout\Editor\CommentBoxSceneGUI.cs" />
+    <Compile Include="Assets\Blockout\Editor\CommentExplorer.cs" />
+    <Compile Include="Assets\Blockout\Editor\CommentExplorerWindowTab.cs" />
+    <Compile Include="Assets\Blockout\Editor\CreateBlockoutPrefabWizzard.cs" />
+    <Compile Include="Assets\Blockout\Editor\EditorHotkeysTracker.cs" />
+    <Compile Include="Assets\Blockout\Editor\EditorObjExporter.cs" />
+    <Compile Include="Assets\Blockout\Editor\EUIResourceManager.cs" />
+    <Compile Include="Assets\Blockout\Editor\NotepadEditor.cs" />
+    <Compile Include="Assets\Blockout\Editor\ThemeDefinition.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\AddObjectPopup.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\BrushCollection.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\BrushObject.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\GameObjectBrushEditor.cs" />
+    <Compile Include="Assets\GameObjectBrush\Scripts\Editor\StringPopupDialog.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -400,6 +433,18 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Blockout_Pin_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Pins\Pin_Backfacing.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Ruler\Ruler_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Area_Comment_Wireframe.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Comment_Shader.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Depth_Blend.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Leaf.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Base.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Tri.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Water.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Editor_Trigger.shader" />
+    <None Include="Assets\Blockout\Resources\Blockout\Shaders\Gate_Particle.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
