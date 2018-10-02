@@ -31,6 +31,11 @@ public class AdvancedMovement : MonoBehaviour
     float dashTimer = -10; // when dash was used last
     float dashMulti = 2.5f; // multiplier used to multiply jumpForce in the dash movements
 
+
+    //Animations
+    Animator anim;
+    bool isMoving = false;
+
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
     {
@@ -52,11 +57,14 @@ public class AdvancedMovement : MonoBehaviour
     void Start()
     {
         rigbody = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+
+        UpdateAnimation();
 
         // jumping movement
         if (Input.GetKeyDown(KeyCode.Space) && (!jumping || !doubleJumping))
@@ -121,5 +129,28 @@ public class AdvancedMovement : MonoBehaviour
     // time difference between 2 times. Confirms user double tapped.
     float CheckTime(float i) {
         return Time.time - i;
+    }
+
+    void UpdateAnimation()
+    {
+
+        if (Input.GetKey("a") || Input.GetKey("d"))
+        {
+            isMoving = true;
+        }
+
+        if (!Input.GetKey("a") && !Input.GetKey("d"))
+        {
+            isMoving = false;
+        }
+
+        if (isMoving)
+        {
+            anim.Play("Run");
+        }
+        else
+        {
+            anim.Play("Idle");
+        }
     }
 }
