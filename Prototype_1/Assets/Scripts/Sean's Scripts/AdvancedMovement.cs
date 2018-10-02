@@ -165,4 +165,4 @@ public class AdvancedMovement : MonoBehaviour
             anim.Play("Idle");
         }
     }
-}
+} 
