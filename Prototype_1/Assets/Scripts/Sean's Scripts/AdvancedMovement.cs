@@ -39,17 +39,15 @@ public class AdvancedMovement : MonoBehaviour
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
     {
-        if (dashing)
-        {
-            if (CheckTime(dashTimer) > 1) {
-
-            }
-        }
         if (collision.gameObject.layer == groundLayer)
         {
             // resets ability to jump/ double jump
-            jumping = false;
-            doubleJumping = false;
+            if (jumping)
+            {
+                FindObjectOfType<AudioManager>().Play("Landing_Thud");
+                jumping = false;
+                doubleJumping = false;
+            }
         }
     }
 

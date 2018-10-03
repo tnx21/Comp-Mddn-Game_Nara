@@ -13,7 +13,8 @@ public class Destructible : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		if(collision.impactForceSum.magnitude > 30f){
 			DestroyMe();
-		}
+            FindObjectOfType<AudioManager>().Play("Rock_Breaking");
+        }
 	}
 	void DestroyMe(){
 		if(debrisPrefab){	
