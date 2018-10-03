@@ -134,12 +134,7 @@
     <Compile Include="Assets\Scripts\Sean's Scripts\AdvancedMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\animController.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\DialogueTrigger.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\EMTest.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\EventManager.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\EventTriggerTest.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\PointerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\SeanMovement.cs" />
     <Compile Include="Assets\Scripts\Waseem's Scripts\MainMenu.cs" />
@@ -215,16 +210,16 @@
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Guest/Desktop/git/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Guest/Desktop/Comp-Mddn-Game/Prototype_1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
