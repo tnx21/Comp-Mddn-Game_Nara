@@ -7,20 +7,60 @@ public class EventManager : MonoBehaviour {
 
 	private Dictionary <string, UnityEvent> eventDictionary;
  
-	//private EventManager eventManager;
+	private static EventManager eventManager;
 
-	//public static EventManager instance {
-	//	get {
-	//	}
-	//}
+	public static EventManager instance {
+		get {
+
+            if(!eventManager) {
+
+                eventManager = FindObjectOfType(typeof(EventManager)) as EventManager;
+
+                if(!eventManager) {
+                    Debug.Log("No event manager in the scene, please make a new event manager");
+                }else {
+                    eventManager.Init();
+                }
+
+            }
+            return eventManager;
+		}
+	}
+
+    void Init () {
+        if(eventDictionary == null) {
+            eventDictionary = new Dictionary<string, UnityEvent>();
+        }
+    }
 
 	// Use this for initialization
-	void Start () {
-		
+    public static void StartListening (string eventName, UnityAction listener) {
+
+        UnityEvent thisEvent = null;
+
+        if(instance.eventDictionary.TryGetValue(eventName, out thisEvent)) {
+            thisEvent.AddListener(listener);
+        }else{
+            thisEvent = new UnityEvent();
+            thisEvent.AddListener(listener);
+            instance.eventDictionary.Add(eventName, thisEvent);
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public static void StopListening (string eventName, UnityAction listener) {
+        if (eventManager == null) return;
+
+        UnityEvent thisEvent = null;
+
+        if(instance.eventDictionary.TryGetValue(eventName, out thisEvent)){
+            thisEvent.RemoveListener(listener);
+        }
+    }
+
+    public static void TriggerEvent (string eventName){
+        UnityEvent thisEvent = null;
+        if(instance.eventDictionary.TryGetValue(eventName, out thisEvent)) {
+            thisEvent.Invoke();
+        }
+    }
 }
