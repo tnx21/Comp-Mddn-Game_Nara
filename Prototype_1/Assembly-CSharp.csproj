@@ -78,6 +78,7 @@
     <Compile Include="Assets\Blockout\Scripts\JumpPad.cs" />
     <Compile Include="Assets\Blockout\Scripts\Notepad.cs" />
     <Compile Include="Assets\Blockout\Scripts\RotateObject.cs" />
+    <Compile Include="Assets\CrystalAnimator.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

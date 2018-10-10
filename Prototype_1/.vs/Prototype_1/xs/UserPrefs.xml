@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{16A84A02-F48A-99C0-433F-81692AC93E49}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mehau's Scripts/Destructible.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CrystalAnimator.cs">
     <Files>
       <File FileName="Assets/GameObjectBrush/Scripts/Editor/BrushCollection.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sean's Scripts/EventManager.cs" Line="37" Column="38" />
       <File FileName="Assets/Scripts/Sean's Scripts/EMTest.cs" Line="20" Column="58" />
-      <File FileName="Assets/Scripts/Sean's Scripts/AdvancedMovement.cs" Line="69" Column="22" />
-      <File FileName="Assets/Scripts/Mehau's Scripts/Destructible.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/Sean's Scripts/AdvancedMovement.cs" Line="131" Column="5" />
+      <File FileName="Assets/Scripts/Mehau's Scripts/Destructible.cs" Line="15" Column="4" />
+      <File FileName="Assets/CrystalAnimator.cs" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
