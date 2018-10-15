@@ -32,6 +32,11 @@ public class AdvancedMovement : MonoBehaviour
     float dashMulti = 2.5f; // multiplier used to multiply jumpForce in the dash movements
 
 
+    //Skills
+    bool doublejump = false;
+    bool dash = false;
+    bool groundslam = false;
+
     //Animations
     Animator anim;
     bool isMoving = false;
@@ -161,6 +166,25 @@ public class AdvancedMovement : MonoBehaviour
         else
         {
             anim.Play("Idle");
+        }
+    }
+
+    public void toggleSkill(string s)
+    {
+        switch (s)
+        {
+            case "DoubleJump":
+                doublejump = !doublejump;
+                break;
+            case "Dash":
+                dash = !dash;
+                break;
+            case "GroundSlam":
+                groundslam = !groundslam;
+                break;
+            default:
+                Debug.Log("No ability found for pickup: " + s);
+                break;
         }
     }
 } 
