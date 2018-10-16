@@ -158,18 +158,21 @@ public class AdvancedMovement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(left, right, Time.time * 3);
         }
 
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("isJumping");
+        }
         if (isMoving)
         {
-            anim.Play("Run");
+            anim.SetBool("isRunning", true);
         }
-        else
+        else if (!isMoving)
         {
-            anim.Play("Idle");
+            anim.SetBool("isRunning", false);
         }
     }
 
-    public void toggleSkill(string s)
+public void toggleSkill(string s)
     {
         switch (s)
         {
