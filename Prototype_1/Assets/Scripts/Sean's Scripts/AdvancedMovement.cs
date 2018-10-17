@@ -69,15 +69,21 @@ public class AdvancedMovement : MonoBehaviour
 
         UpdateAnimation();
 
+        movementLogic();
+
+    }
+
+    void movementLogic()
+    {
         // jumping movement
         if (Input.GetKeyDown(KeyCode.Space) && (!jumping || !doubleJumping))
-        {            
+        {
             if (!jumping)
             {
                 rigbody.AddForce(0, jumpForce, 0);
                 jumping = true;
             }
-            else
+            else if (doublejump)
             {
                 rigbody.AddForce(0, jumpForce * 1.25f, 0);
                 doubleJumping = true;
@@ -85,10 +91,10 @@ public class AdvancedMovement : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Jump_Sound");
         }
         // ground pound movement
-        if (Input.GetKey("s") && (jumping || doubleJumping))
+        if (Input.GetKey("s") && (jumping || doubleJumping) && groundslam)
         {
             rigbody.velocity.Set(0, 0, 0);      // stop directional movement
-            rigbody.AddForce(0, -jumpForce/2, 0);   // apply downwards force
+            rigbody.AddForce(0, -jumpForce / 2, 0);   // apply downwards force
         }
         // right movement
         if (Input.GetKey("d") && rigbody.velocity[0] < maxVelocity)
@@ -96,8 +102,8 @@ public class AdvancedMovement : MonoBehaviour
             rigbody.AddForce(moveForce, 0, 0);
         }
         // right dash
-        if (Input.GetKeyDown("d"))
-        {   
+        if (Input.GetKeyDown("d") && dash)
+        {
             if (CheckTime(lastD) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
                 rigbody.AddForce(dashForce, 0, 0);
@@ -115,7 +121,7 @@ public class AdvancedMovement : MonoBehaviour
             rigbody.AddForce(-moveForce, 0, 0);
         }
         // left dash
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") && dash)
         {
             if (CheckTime(lastA) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
@@ -129,6 +135,7 @@ public class AdvancedMovement : MonoBehaviour
             }
         }
     }
+
     // time difference between 2 times. Confirms user double tapped.
     float CheckTime(float i) {
         return Time.time - i;

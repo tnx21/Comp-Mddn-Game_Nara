@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PickupHandler : MonoBehaviour {
 
+    /*
+     * Script to handle player collisions with pick up objects, seperated from movement code for simplicity.
+     */
+
     AdvancedMovement playerMovement;
 
 	// Use this for initialization
