@@ -66,7 +66,6 @@ public class AdvancedMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         UpdateAnimation();
 
         // jumping movement
