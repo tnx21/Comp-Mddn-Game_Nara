@@ -74,11 +74,13 @@ public class AdvancedMovement : MonoBehaviour
             if (!jumping)
             {
                 rigbody.AddForce(0, jumpForce, 0);
+                anim.SetTrigger("isJumping");
                 jumping = true;
             }
             else
             {
                 rigbody.AddForce(0, jumpForce * 1.25f, 0);
+                anim.SetTrigger("isDoubleJumping");
                 doubleJumping = true;
             }
             FindObjectOfType<AudioManager>().Play("Jump_Sound");
@@ -159,10 +161,10 @@ public class AdvancedMovement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(left, right, Time.time * 3);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetTrigger("isJumping");
-        }
+//        if (Input.GetKeyDown(KeyCode.Space))
+//        {
+//            anim.SetTrigger("isJumping");
+//        }
         if (isMoving)
         {
             anim.SetBool("isRunning", true);
