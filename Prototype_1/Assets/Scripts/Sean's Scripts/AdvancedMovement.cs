@@ -103,6 +103,7 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(dashForce, 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
+                anim.SetTrigger("isDashing");
             }
             else
             {
@@ -122,6 +123,7 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(-dashForce, 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
+                anim.SetTrigger("isDashing");
             }
             else
             {
