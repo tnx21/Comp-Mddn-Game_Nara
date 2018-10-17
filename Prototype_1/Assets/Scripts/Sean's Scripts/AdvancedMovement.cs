@@ -33,16 +33,14 @@ public class AdvancedMovement : MonoBehaviour
 
 
     //Skills
-    public bool doublejump = false;
-    public bool dash = false;
-    public bool groundslam = false;
+    public bool doublejump = true;
+    public bool dash = true;
+    public bool groundslam = true;
 
     //Animations
     Animator anim;
     bool isMoving = false;
 
-    //Wall Jump
-    float oldPos;
 
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
@@ -64,7 +62,6 @@ public class AdvancedMovement : MonoBehaviour
     {
         rigbody = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-        oldPos = transform.position.x;
     }
 
     // Update is called once per frame
@@ -74,7 +71,6 @@ public class AdvancedMovement : MonoBehaviour
 
         movementLogic();
 
-        oldPos = transform.position.x;
     }
 
     void movementLogic()
