@@ -66,7 +66,6 @@ public class AdvancedMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         UpdateAnimation();
 
         movementLogic();
@@ -81,11 +80,13 @@ public class AdvancedMovement : MonoBehaviour
             if (!jumping)
             {
                 rigbody.AddForce(0, jumpForce, 0);
+                anim.SetTrigger("isJumping");
                 jumping = true;
             }
             else if (doublejump)
             {
                 rigbody.AddForce(0, jumpForce * 1.25f, 0);
+                anim.SetTrigger("isDoubleJumping");
                 doubleJumping = true;
             }
             FindObjectOfType<AudioManager>().Play("Jump_Sound");
@@ -109,6 +110,7 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(dashForce, 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
+                anim.SetTrigger("isDashing");
             }
             else
             {
@@ -128,6 +130,7 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(-dashForce, 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
+                anim.SetTrigger("isDashing");
             }
             else
             {
@@ -165,18 +168,21 @@ public class AdvancedMovement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(left, right, Time.time * 3);
         }
 
-
+//        if (Input.GetKeyDown(KeyCode.Space))
+//        {
+//            anim.SetTrigger("isJumping");
+//        }
         if (isMoving)
         {
-            anim.Play("Run");
+            anim.SetBool("isRunning", true);
         }
-        else
+        else if (!isMoving)
         {
-            anim.Play("Idle");
+            anim.SetBool("isRunning", false);
         }
     }
 
-    public void toggleSkill(string s)
+public void toggleSkill(string s)
     {
         switch (s)
         {
