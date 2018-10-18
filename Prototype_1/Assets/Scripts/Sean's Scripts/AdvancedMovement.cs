@@ -37,10 +37,15 @@ public class AdvancedMovement : MonoBehaviour
     public bool dash = true;
     public bool groundslam = true;
 
+    //wall check
+    public GameObject rcPoint;
+
     //Animations
     Animator anim;
     bool isMoving = false;
 
+    //Wall jump
+    float oldPos;
 
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
@@ -71,7 +76,35 @@ public class AdvancedMovement : MonoBehaviour
 
         movementLogic();
 
+        wallCheck();
+
+
+
     }
+
+
+    private void wallCheck(){
+        RaycastHit hit;
+        
+        if(Physics.Raycast(rcPoint.transform.position, rcPoint.transform.right, out hit, 2f) && isMoving){
+            Debug.Log("There is something in front of me");
+            Debug.DrawRay(rcPoint.transform.position, rcPoint.transform.right, Color.green, 2f, false);
+
+        }else{
+            Debug.DrawRay(rcPoint.transform.position, rcPoint.transform.right*2, Color.red);
+        }
+        if (Physics.Raycast(rcPoint.transform.position, -rcPoint.transform.up, out hit, 0.2f))
+        {
+            Debug.DrawRay(rcPoint.transform.position, -rcPoint.transform.up, Color.green, 0.5f, false);
+            Debug.Log("There is something below me");
+            anim.SetTrigger("isWallJumping");
+        }else{
+            Debug.DrawRay(rcPoint.transform.position, -rcPoint.transform.up*0.2f, Color.red);
+            anim.Play("Run");
+        }
+        Debug.Log("Break");
+    }
+
 
     void movementLogic()
     {
