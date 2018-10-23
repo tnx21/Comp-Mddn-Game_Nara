@@ -42,14 +42,13 @@ public class AdvancedMovement : MonoBehaviour
     bool isMoving = false;
 
     //Wall jump
- 
+    float distToGround;
 
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == terrain)
         {
-            Debug.Log("Terrain Collision");
             // resets ability to jump/ double jump
             if (jumping)
             {
@@ -75,16 +74,16 @@ public class AdvancedMovement : MonoBehaviour
 
         movementLogic();
 
-        if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && rigbody.velocity.y != 0)
+
+        if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && !IsGrounded())
         {
-            Debug.Log("WALL JUMP");
+            //Debug.Log("WALL JUMP");
             anim.SetBool("isWallJumping",true);
         }
         else
         {
             anim.SetBool("isWallJumping", false);
         }
-        //Debug.Log(rigbody.velocity.y);
     }
 
     void movementLogic()
@@ -211,5 +210,9 @@ public void toggleSkill(string s)
                 Debug.Log("No ability found for pickup: " + s);
                 break;
         }
+    }
+
+    public bool IsGrounded() {
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.3f);
     }
 } 
