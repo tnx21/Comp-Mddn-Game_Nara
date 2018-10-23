@@ -73,17 +73,6 @@ public class AdvancedMovement : MonoBehaviour
         UpdateAnimation();
 
         movementLogic();
-
-
-        if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && !IsGrounded())
-        {
-            //Debug.Log("WALL JUMP");
-            anim.SetBool("isWallJumping",true);
-        }
-        else
-        {
-            anim.SetBool("isWallJumping", false);
-        }
     }
 
     void movementLogic()
@@ -191,9 +180,21 @@ public class AdvancedMovement : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+
+        //Wall Jump Animation 
+
+        //if holding down move but not moving and isn't grounded, then is wall jumping
+        if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && !IsGrounded())
+        {
+            anim.SetBool("isWallJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isWallJumping", false);
+        }
     }
 
-public void toggleSkill(string s)
+    public void toggleSkill(string s)
     {
         switch (s)
         {
