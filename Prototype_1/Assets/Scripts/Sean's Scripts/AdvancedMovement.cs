@@ -44,6 +44,9 @@ public class AdvancedMovement : MonoBehaviour
     //Wall jump
     float distToGround;
 
+    //Ground slam
+    bool isGroundSlamming = false;
+
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
     {
@@ -99,6 +102,7 @@ public class AdvancedMovement : MonoBehaviour
         {
             rigbody.velocity.Set(0, 0, 0);      // stop directional movement
             rigbody.AddForce(0, -jumpForce / 2, 0);   // apply downwards force
+            isGroundSlamming = true;
         }
         // right movement
         if (Input.GetKey("d") && rigbody.velocity[0] < maxVelocity)
@@ -182,7 +186,6 @@ public class AdvancedMovement : MonoBehaviour
         }
 
         //Wall Jump Animation 
-
         //if holding down move but not moving and isn't grounded, then is wall jumping
         if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && !IsGrounded())
         {
@@ -191,6 +194,16 @@ public class AdvancedMovement : MonoBehaviour
         else
         {
             anim.SetBool("isWallJumping", false);
+        }
+
+        //Ground Slam Animation
+        if (isGroundSlamming && IsGrounded())
+        {
+            anim.Play("Ground_Slam");
+        }
+        if (IsGrounded())
+        {
+            isGroundSlamming = false;
         }
     }
 
