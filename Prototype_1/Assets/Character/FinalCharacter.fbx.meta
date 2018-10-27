@@ -378,8 +378,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Wall_Jump
       takeName: Take 001
-      firstFrame: 278
-      lastFrame: 298
+      firstFrame: 284
+      lastFrame: 290
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
