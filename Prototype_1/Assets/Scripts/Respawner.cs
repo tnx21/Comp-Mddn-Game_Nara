@@ -19,11 +19,6 @@ public class Respawner : MonoBehaviour {
         maxLives = 5;
         currentLives = maxLives;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        Debug.Log(currentLives);
-	}
 
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Mainspawn")){
