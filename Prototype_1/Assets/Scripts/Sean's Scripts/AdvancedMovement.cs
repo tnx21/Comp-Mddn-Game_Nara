@@ -33,9 +33,9 @@ public class AdvancedMovement : MonoBehaviour
 
 
     //Skills
-    public bool doublejump = true;
-    public bool dash = true;
-    public bool groundslam = true;
+    public bool doublejump = false;
+    public bool dash = false;
+    public bool groundslam = false;
 
     //Animations
     Animator anim;
@@ -112,7 +112,7 @@ public class AdvancedMovement : MonoBehaviour
             rigbody.AddForce(moveForce * Input.GetAxis("Horizontal"), 0, 0);
         }
         // Dash movement 
-        if (Input.GetKeyDown("d") || Input.GetKeyDown("a") && dash)
+        if ( (Input.GetKeyDown("d") || Input.GetKeyDown("a")) && dash)
         {
             if (CheckTime(lastD) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
@@ -210,7 +210,7 @@ public class AdvancedMovement : MonoBehaviour
     }
 
     void UpdateUI(){
-        if(CheckTime(dashTimer) > dashCoolDown)
+        if(CheckTime(dashTimer) > dashCoolDown && dash)
         {
             dashCooldownIcon.SetActive(false);
         }
