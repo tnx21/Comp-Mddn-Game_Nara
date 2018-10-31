@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour {
 
     public GameObject pauseMenuUI;
 
+    public AdvancedMovement movementScript;
+
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -28,6 +30,7 @@ public class PauseMenu : MonoBehaviour {
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        movementScript.enabled = true;
         isPaused = false;
     }
 
@@ -36,6 +39,7 @@ public class PauseMenu : MonoBehaviour {
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        movementScript.enabled = false;
         isPaused = true;
     }
 
@@ -43,7 +47,6 @@ public class PauseMenu : MonoBehaviour {
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        isPaused = false;
         SceneManager.LoadScene("Menu");
     }
 
@@ -52,6 +55,7 @@ public class PauseMenu : MonoBehaviour {
     {
         isPaused = false;
         Time.timeScale = 1f;
+        movementScript.enabled = true;
         SceneManager.LoadScene("Scene1");
     }
 
