@@ -101,17 +101,17 @@ public class AdvancedMovement : MonoBehaviour
             rigbody.AddForce(0, -jumpForce / 2, 0);   // apply downwards force
             isGroundSlamming = true;
         }
-        // right movement
-        if (Input.GetKey("d") && rigbody.velocity[0] < maxVelocity)
+        // Running movement
+        if ((Input.GetKey("d") && rigbody.velocity[0] < maxVelocity) || (Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity))
         {
-            rigbody.AddForce(moveForce, 0, 0);
+            rigbody.AddForce(moveForce * Input.GetAxis("Horizontal"), 0, 0);
         }
-        // right dash
-        if (Input.GetKeyDown("d") && dash)
+        // Dash movement 
+        if (Input.GetKeyDown("d") || Input.GetKeyDown("a") && dash)
         {
             if (CheckTime(lastD) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
-                rigbody.AddForce(dashForce, 0, 0);
+                rigbody.AddForce(dashForce * Input.GetAxisRaw("Horizontal"), 0, 0);
                 dashTimer = Time.time;
                 dashing = true;
                 anim.SetTrigger("isDashing");
@@ -121,26 +121,7 @@ public class AdvancedMovement : MonoBehaviour
                 lastD = Time.time;
             }
         }
-        // left movement
-        if (Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity)
-        {
-            rigbody.AddForce(-moveForce, 0, 0);
-        }
-        // left dash
-        if (Input.GetKeyDown("a") && dash)
-        {
-            if (CheckTime(lastA) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
-            {
-                rigbody.AddForce(-dashForce, 0, 0);
-                dashTimer = Time.time;
-                dashing = true;
-                anim.SetTrigger("isDashing");
-            }
-            else
-            {
-                lastA = Time.time;
-            }
-        }
+
     }
 
     // time difference between 2 times. Confirms user double tapped.
