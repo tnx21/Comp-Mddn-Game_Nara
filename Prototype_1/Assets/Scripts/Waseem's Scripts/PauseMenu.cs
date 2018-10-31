@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour {
         }
 	}
 
+    //Unpause game and set time back to normal
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour {
         isPaused = false;
     }
 
+    //Pause the game and stop time
     void Pause()
     {
         pauseMenuUI.SetActive(true);
@@ -37,13 +39,15 @@ public class PauseMenu : MonoBehaviour {
         isPaused = true;
     }
 
+    //unpause game if it's paused before returning to menu
     public void LoadMenu()
     {
-        //unpause game if it's paused before returning to menu
         Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene("Menu");
     }
 
+    //Unpause game and reload scene
     public void RestartGame()
     {
         isPaused = false;

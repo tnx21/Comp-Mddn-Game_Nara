@@ -7,25 +7,25 @@ public class AdvancedMovement : MonoBehaviour
 
     public LayerMask terrain;   // for checking if player hits the terrain
 
-    Rigidbody rigbody;          // this body is used to apply directional force 
+    Rigidbody rigbody;
 
     // basic movement controls
     [Range(0, 30)]
-    public int maxVelocity = 10;        // max speed of the object
-    int moveForce = 150;         // strength of push used for movement
+    public int maxVelocity = 10;
+    int moveForce = 150;    
 
     // jumping movement controls
     [Range(0f, 3000f)]
-    public float jumpForce = 1000f;       // strength of push used for jumping
-    bool jumping = false;       // has the object used jump
-    bool doubleJumping = false; // has the object used double jump
+    public float jumpForce = 1000f;
+    bool jumping = false;     
+    bool doubleJumping = false; 
 
     // dash movement controls
     float lastA = -3;   // used for timing double tap in dash
     float lastD = -3;   // used for timing double tap in dash
-    bool dashing = false;  // is object dashing
+    bool dashing = false;  
     [Range(0f, 3000f)]
-    public float dashForce = 1000f; // strength of push used for dashing
+    public float dashForce = 1000f;
     [Range(0f, 5f)]
     public float dashCoolDown = 3;
     float dashTimer = -10; // when dash was used last
@@ -62,7 +62,6 @@ public class AdvancedMovement : MonoBehaviour
         }
     }
 
-    // Use this for initialization
     void Start()
     {
         rigbody = GetComponent<Rigidbody>();
@@ -70,11 +69,9 @@ public class AdvancedMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateAnimation();
-
         movementLogic();
     }
 
@@ -163,9 +160,9 @@ public class AdvancedMovement : MonoBehaviour
             isMoving = false;
         }
 
+        //Rotating the player in the direction they are moving
         Quaternion right = Quaternion.Euler(0f, 0f, 0f);
         Quaternion left = Quaternion.Euler(0f, 180f, 0f);
-
         if (Input.GetKey("a"))
         {
             transform.rotation = Quaternion.Lerp(right, left, Time.time * 3);
@@ -186,7 +183,7 @@ public class AdvancedMovement : MonoBehaviour
         }
 
         //Wall Jump Animation 
-        //if holding down move but not moving and isn't grounded, then is wall jumping
+        //if holding down move but x positing not moving and isn't grounded, then is wall jumping
         if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && !IsGrounded())
         {
             anim.SetBool("isWallJumping", true);
@@ -227,6 +224,7 @@ public class AdvancedMovement : MonoBehaviour
     }
 
     public bool IsGrounded() {
+        //Checking the distance between the player and the ground to determine if the player is grounded
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.3f);
     }
 } 

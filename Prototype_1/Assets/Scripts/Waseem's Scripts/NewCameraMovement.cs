@@ -4,50 +4,49 @@ using System.Collections;
 public class NewCameraMovement : MonoBehaviour
 {
 
-    public GameObject player;       //Public variable to store a reference to the player game object
-    private Vector3 offset;         //Private variable to store the offset distance between the player and camera
-    private Vector3 leftOffset;
-    private Vector3 rightOffset;
+    public GameObject player;       
+    private Vector3 offset;         //offset to center camera
+    private Vector3 leftOffset;     //offset to move camera left
+    private Vector3 rightOffset;    //offset to move camera right
 
     private Vector3 currentPosition;
-    // Use this for initialization
+
     void Start()
     {
-        //Calculate and store the offset value by getting the distance between the player's position and camera's position.
+        //Calculating the offset to the middle
         offset = transform.position - player.transform.position;
 
+        //Calculating the offset to the left
         leftOffset = transform.position - player.transform.position;
         leftOffset.x = leftOffset.x + 6;
 
+        //Calculating the offset to the right
         rightOffset = transform.position - player.transform.position;
         rightOffset.x = rightOffset.x - 6;
 
+        //Starting the camera in the middle
         transform.position = player.transform.position + offset;
         currentPosition = transform.position;
     }
 
-    // LateUpdate is called after Update each frame
+    //Using LateUpdate so that the camera moves after the player moves (i.e. following the player)
     void LateUpdate()
     {
-
-
-        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
+        //If player not moving center the camera
         if (!Input.GetKey("a") && !Input.GetKey("d"))
         {
-            //transform.position = player.transform.position + offset;
             transform.position = Vector3.Lerp(currentPosition, player.transform.position + offset, 10.0f * Time.deltaTime);
             currentPosition = transform.position;
         }
+        //If player moving left, lerp the camera to the right
         else if (Input.GetKey("a"))
         {
-
-            //transform.position = player.transform.position + rightOffset;
             transform.position = Vector3.Lerp(currentPosition, player.transform.position + rightOffset, 10.0f * Time.deltaTime);
             currentPosition = transform.position;
         }
+        //If player moving right, lerp the camera to the left
         else if (Input.GetKey("d"))
         {
-            //transform.position = player.transform.position + leftOffset;
             transform.position = Vector3.Lerp(currentPosition, player.transform.position + leftOffset, 10.0f * Time.deltaTime);
             currentPosition = transform.position;
         }

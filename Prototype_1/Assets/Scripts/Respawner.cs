@@ -45,6 +45,7 @@ public class Respawner : MonoBehaviour {
         }
     }
 
+    //Update Hub to show lives when life is lost
     void UpdateHud()
     {
         if (currentLives > maxLives)
@@ -52,6 +53,7 @@ public class Respawner : MonoBehaviour {
             currentLives = maxLives;
         }
 
+        //Depending on how many lives left, display the correct amount of lives
         switch (currentLives)
         {
             case 5:
