@@ -102,6 +102,7 @@ public class AdvancedMovement : MonoBehaviour
             isGroundSlamming = true;
         }
         // Running movement
+        //if movement key pressed and within velocity move in the correct direction
         if ((Input.GetKey("d") && rigbody.velocity[0] < maxVelocity) || (Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity))
         {
             rigbody.AddForce(moveForce * Input.GetAxis("Horizontal"), 0, 0);
