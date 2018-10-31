@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour {
     public Animator animator;
 
     private Queue<string> sentences;
+    private Queue<Dialogue> dialogueQueue = new Queue<Dialogue>();
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,17 @@ public class DialogueManager : MonoBehaviour {
         DisplaynextSentence();
     }
 
+    public void QueueDialogue(Dialogue[] dialogues) {  
+        if (dialogues.Length == 0 ) {
+            return;
+        }
+        foreach (Dialogue dialogue in dialogues)
+        {
+            dialogueQueue.Enqueue(dialogue);
+        }
+        StartDialogue(this.dialogueQueue.Dequeue());
+    }
+
     public void DisplaynextSentence() {
         if (sentences.Count == 0) {
             EndDialogue();
@@ -47,5 +59,8 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue() {
         Debug.Log("End of conversation");
         animator.SetBool("IsOpen", false);
+        if (dialogueQueue.Count != 0) {
+            StartDialogue(dialogueQueue.Dequeue());
+        }
     }
 }
