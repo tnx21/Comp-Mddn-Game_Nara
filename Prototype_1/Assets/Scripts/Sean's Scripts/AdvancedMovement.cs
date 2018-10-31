@@ -47,6 +47,9 @@ public class AdvancedMovement : MonoBehaviour
     //Ground slam
     bool isGroundSlamming = false;
 
+    //UI
+    public GameObject dashCooldownIcon;
+
     // Checks if the player touches a platform and resets jumping capability if they do
     public void OnCollisionEnter(Collision collision)
     {
@@ -72,10 +75,11 @@ public class AdvancedMovement : MonoBehaviour
     void Update()
     {
         UpdateAnimation();
-        movementLogic();
+        MovementLogic();
+        UpdateUI();
     }
 
-    void movementLogic()
+    void MovementLogic()
     {
         // jumping movement
         if (Input.GetKeyDown(KeyCode.Space) && (!jumping || !doubleJumping))
@@ -205,7 +209,19 @@ public class AdvancedMovement : MonoBehaviour
         }
     }
 
-    public bool IsGrounded() {
+    void UpdateUI(){
+        if(CheckTime(dashTimer) > dashCoolDown)
+        {
+            dashCooldownIcon.SetActive(false);
+        }
+        else
+        {
+            dashCooldownIcon.SetActive(true);
+        }
+    }
+
+    public bool IsGrounded() 
+    {
         //Checking the distance between the player and the ground to determine if the player is grounded
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.3f);
     }
