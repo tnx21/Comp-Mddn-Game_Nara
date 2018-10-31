@@ -27,23 +27,23 @@ public class PickupHandler : MonoBehaviour {
         switch (tag)
         {
             case "DoubleJump":
-                Debug.Log("Picked up DoubleJump");
+               
                 playerMovement.toggleSkill(tag);
                 other.gameObject.SetActive(false);
                 break;
             case "Dash":
-                Debug.Log("Picked up Dash");
+               
                 playerMovement.toggleSkill(tag);
                 other.gameObject.SetActive(false);
                 break;
             case "GroundSlam":
-                Debug.Log("Picked up GroundSlam");
+                
                 playerMovement.toggleSkill(tag);
                 other.gameObject.SetActive(false);
                 break;
             default:
-                Debug.Log("No behaviour for trigger tag: " + tag);
-                other.gameObject.SetActive(false);
+
+        
                 break;
         }
     }
