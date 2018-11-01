@@ -99,7 +99,7 @@ public class AdvancedMovement : MonoBehaviour
         }
 
         // ground pound movement
-        if (Input.GetKey("s") && (jumping || doubleJumping) && groundslam)
+        if (Input.GetKey("s") && !IsGrounded() && groundslam)
         {
             rigbody.velocity.Set(0, 0, 0);      // stop directional movement
             rigbody.AddForce(0, -jumpForce / 2, 0);   // apply downwards force
