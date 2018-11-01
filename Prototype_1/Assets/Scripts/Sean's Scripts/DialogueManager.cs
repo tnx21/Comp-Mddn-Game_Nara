@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private Queue<Dialogue> dialogueQueue = new Queue<Dialogue>();
+
+    bool isCutscene = false;
 
     // Use this for initialization
     void Start()
@@ -41,6 +45,8 @@ public class DialogueManager : MonoBehaviour
 
     public void QueueDialogue(Dialogue[] dialogues)
     {
+        isCutscene = true;
+
         if (dialogues.Length == 0)
         {
             return;
@@ -70,9 +76,17 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of conversation");
         animator.SetBool("IsOpen", false);
-        if (dialogueQueue.Count != 0)
-        {
-            StartDialogue(dialogueQueue.Dequeue());
+
+        if(isCutscene){
+            if (dialogueQueue.Count != 0)
+            {
+                StartDialogue(dialogueQueue.Dequeue());
+            }
+            else
+            {
+                isCutscene = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }
