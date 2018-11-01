@@ -19,14 +19,19 @@ public class DialogueManager : MonoBehaviour
 
     bool isCutscene = false;
 
+    bool isFinalDialogue;
+
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, bool isFinalDialogue)
     {
+
+        this.isFinalDialogue = isFinalDialogue;
+
         animator.SetBool("IsOpen", true);
 
         Debug.Log("Starting Conversation: ");
@@ -55,7 +60,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueQueue.Enqueue(dialogue);
         }
-        StartDialogue(this.dialogueQueue.Dequeue());
+        StartDialogue(this.dialogueQueue.Dequeue(), isFinalDialogue);
     }
 
     public void DisplaynextSentence()
@@ -77,10 +82,11 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of conversation");
         animator.SetBool("IsOpen", false);
 
-        if(isCutscene){
+        if (isCutscene)
+        {
             if (dialogueQueue.Count != 0)
             {
-                StartDialogue(dialogueQueue.Dequeue());
+                StartDialogue(dialogueQueue.Dequeue(), isFinalDialogue);
             }
             else
             {
@@ -88,5 +94,15 @@ public class DialogueManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+        else if (isFinalDialogue)
+        {
+            StartCoroutine(ReturnToMenu());
+        }
+    }
+
+    IEnumerator ReturnToMenu()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }
