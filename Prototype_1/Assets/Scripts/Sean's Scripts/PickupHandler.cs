@@ -29,16 +29,19 @@ public class PickupHandler : MonoBehaviour {
             case "DoubleJump":
                
                 playerMovement.toggleSkill(tag);
+                FindObjectOfType<AudioManager>().Play("collectable");
                 other.gameObject.SetActive(false);
                 break;
             case "Dash":
                
                 playerMovement.toggleSkill(tag);
+                FindObjectOfType<AudioManager>().Play("collectable");
                 other.gameObject.SetActive(false);
                 break;
             case "GroundSlam":
                 
                 playerMovement.toggleSkill(tag);
+                FindObjectOfType<AudioManager>().Play("collectable");
                 other.gameObject.SetActive(false);
                 break;
             default:
