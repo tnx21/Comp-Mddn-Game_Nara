@@ -12,18 +12,18 @@ public class AdvancedMovement : MonoBehaviour
     // basic movement controls
     [Range(0, 30)]
     public int maxVelocity = 10;
-    int moveForce = 150;    
+    int moveForce = 150;
 
     // jumping movement controls
     [Range(0f, 3000f)]
     public float jumpForce = 1000f;
-    bool jumping = false;     
-    bool doubleJumping = false; 
+    bool jumping = false;
+    bool doubleJumping = false;
 
     // dash movement controls
     float lastA = -3;   // used for timing double tap in dash
     float lastD = -3;   // used for timing double tap in dash
-    bool dashing = false;  
+    bool dashing = false;
     [Range(0f, 3000f)]
     public float dashForce = 1000f;
     [Range(0f, 5f)]
@@ -39,7 +39,6 @@ public class AdvancedMovement : MonoBehaviour
 
     //Animations
     Animator anim;
-    bool isMoving = false;
 
     //Wall jump
     float distToGround;
@@ -55,7 +54,7 @@ public class AdvancedMovement : MonoBehaviour
     {
         if (collision.gameObject.layer == terrain)
         {
-            // resets ability to jump/ double jump
+            // resets ability to jump / double jump
             if (jumping)
             {
                 FindObjectOfType<AudioManager>().Play("Landing_Thud");
@@ -75,11 +74,11 @@ public class AdvancedMovement : MonoBehaviour
     void Update()
     {
         UpdateAnimation();
-        MovementLogic();
+        UpdateMovement();
         UpdateUI();
     }
 
-    void MovementLogic()
+    private void UpdateMovement()
     {
         // jumping movement
         if (Input.GetKeyDown(KeyCode.Space) && (!jumping || !doubleJumping))
@@ -98,6 +97,7 @@ public class AdvancedMovement : MonoBehaviour
             }
             FindObjectOfType<AudioManager>().Play("Jump_Sound");
         }
+
         // ground pound movement
         if (Input.GetKey("s") && (jumping || doubleJumping) && groundslam)
         {
@@ -105,15 +105,18 @@ public class AdvancedMovement : MonoBehaviour
             rigbody.AddForce(0, -jumpForce / 2, 0);   // apply downwards force
             isGroundSlamming = true;
         }
+
         // Running movement
         //if movement key pressed and within velocity move in the correct direction
         if ((Input.GetKey("d") && rigbody.velocity[0] < maxVelocity) || (Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity))
         {
             rigbody.AddForce(moveForce * Input.GetAxis("Horizontal"), 0, 0);
         }
+
         // Dash movement 
-        if ( (Input.GetKeyDown("d") || Input.GetKeyDown("a")) && dash)
+        if ((Input.GetKeyDown("d") || Input.GetKeyDown("a")) && dash)
         {
+            //If pressed double tapped move key within 0.25 seconds and dash timer is off cooldown
             if (CheckTime(lastD) < 0.25 && CheckTime(dashTimer) > dashCoolDown)
             {
                 rigbody.AddForce(dashForce * Input.GetAxisRaw("Horizontal"), 0, 0);
@@ -130,22 +133,13 @@ public class AdvancedMovement : MonoBehaviour
     }
 
     // time difference between 2 times. Confirms user double tapped.
-    float CheckTime(float i) {
+    private float CheckTime(float i)
+    {
         return Time.time - i;
     }
 
-    void UpdateAnimation()
+    private void UpdateAnimation()
     {
-
-        if (Input.GetKey("a") || Input.GetKey("d"))
-        {
-            isMoving = true;
-        }
-        if (!Input.GetKey("a") && !Input.GetKey("d"))
-        {
-            isMoving = false;
-        }
-
         //Rotating the player in the direction they are moving
         Quaternion right = Quaternion.Euler(0f, 0f, 0f);
         Quaternion left = Quaternion.Euler(0f, 180f, 0f);
@@ -159,18 +153,18 @@ public class AdvancedMovement : MonoBehaviour
         }
 
         //Running Animation
-        if (isMoving)
+        if (IsMoving())
         {
             anim.SetBool("isRunning", true);
         }
-        else if (!isMoving)
+        else if (!IsMoving())
         {
             anim.SetBool("isRunning", false);
         }
 
         //Wall Jump Animation 
         //if holding down move but x positing not moving and isn't grounded, then is wall jumping
-        if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && isMoving && !IsGrounded())
+        if ((rigbody.velocity.x >= -0.5 && rigbody.velocity.x <= 0.5) && IsMoving() && !IsGrounded())
         {
             anim.SetBool("isWallJumping", true);
         }
@@ -190,6 +184,7 @@ public class AdvancedMovement : MonoBehaviour
         }
     }
 
+    //Activating skills with pickups
     public void toggleSkill(string s)
     {
         switch (s)
@@ -209,8 +204,11 @@ public class AdvancedMovement : MonoBehaviour
         }
     }
 
-    void UpdateUI(){
-        if(CheckTime(dashTimer) > dashCoolDown && dash)
+    //Updating UI to show cooldowns of player abilities
+    private void UpdateUI()
+    {
+        //If dash is off cooldown and has the dash ability
+        if (CheckTime(dashTimer) > dashCoolDown && dash)
         {
             dashCooldownIcon.SetActive(false);
         }
@@ -220,9 +218,19 @@ public class AdvancedMovement : MonoBehaviour
         }
     }
 
-    public bool IsGrounded() 
+    //Checking if player is moving based on key inputs
+    private bool IsMoving()
+    {
+        if (Input.GetKey("a") || Input.GetKey("d"))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private bool IsGrounded()
     {
         //Checking the distance between the player and the ground to determine if the player is grounded
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.3f);
     }
-} 
+}
