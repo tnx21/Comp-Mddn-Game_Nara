@@ -21,7 +21,7 @@ public class Respawner : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other){
-        if(other.CompareTag("Mainspawn")){
+        if (other.CompareTag("Mainspawn")){
             if (other.gameObject != this.mainSpawn) {
                 Debug.Log("Updated main spawn");
                 mainSpawn = other.gameObject;
