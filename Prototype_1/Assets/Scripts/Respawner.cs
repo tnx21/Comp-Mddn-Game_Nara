@@ -22,13 +22,19 @@ public class Respawner : MonoBehaviour {
 
     void OnTriggerEnter(Collider other){
         if(other.CompareTag("Mainspawn")){
-            Debug.Log("Updated main spawn");
-            mainSpawn = other.gameObject;
-            subSpawn = other.gameObject;
+            if (other.gameObject != this.mainSpawn) {
+                Debug.Log("Updated main spawn");
+                mainSpawn = other.gameObject;
+                subSpawn = other.gameObject;
+                FindObjectOfType<AudioManager>().Play("checkpoint");
+            }
         }
         if (other.CompareTag("Subspawn")){
-            Debug.Log("Updated sub spawn");
-            subSpawn = other.gameObject;
+            if (other.gameObject != this.subSpawn) {
+                Debug.Log("Updated sub spawn");
+                subSpawn = other.gameObject;
+                FindObjectOfType<AudioManager>().Play("checkpoint");
+            }
         }
         if(other.CompareTag("Killbox")){
             rb.velocity = new Vector3(0, 0, 0);
