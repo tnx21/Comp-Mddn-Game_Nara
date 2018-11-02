@@ -19,6 +19,9 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;    // sentences in dialogue
     private Queue<Dialogue> dialogueQueue;  // queue of dialogue for cutscenes (so names can change)
 
+    public SpriteRenderer naraOffSprite;
+    public SpriteRenderer kingOffSprite;
+
     bool isCutscene = false;    // to determine if we take from the queue or not
 
     // initialize queues
@@ -38,6 +41,10 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Starting Conversation: ");
         nameText.text = dialogue.name;  // put name into displayed dialogue box
         sentences.Clear();  // resets the dialogue box, ready for new sentences
+
+        if (isCutscene) {
+            changeSpeaker(dialogue.name);
+        }
 
         // queue up the sentences from dialogue
         foreach (string sentence in dialogue.sentences)
@@ -102,6 +109,18 @@ public class DialogueManager : MonoBehaviour
         else if (isFinalDialogue)
         {
             StartCoroutine(ReturnToMenu()); // game over, call method to take us back to main menu
+        }
+    }
+
+    private void changeSpeaker(string name) {
+        if (name.Equals("Nara") && naraOffSprite != null && kingOffSprite != null)
+        {
+            naraOffSprite.enabled = false;
+            kingOffSprite.enabled = true;
+        }
+        else if (name.Equals("King") && naraOffSprite != null && kingOffSprite != null) {
+            naraOffSprite.enabled = true;
+            kingOffSprite.enabled = false;
         }
     }
     
