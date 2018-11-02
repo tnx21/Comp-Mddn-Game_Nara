@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public Sound[] sounds;  // stores all the sounds that this audio manager will be using
 
-    public Sound[] sounds;
-
-    // Use this for initialization
     void Awake()
     {
+        // initializes each sound clip with 
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
