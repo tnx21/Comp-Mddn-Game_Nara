@@ -107,10 +107,18 @@ public class AdvancedMovement : MonoBehaviour
         }
 
         // Running movement
-        //if movement key pressed and within velocity move in the correct direction
-        if ((Input.GetKey("d") && rigbody.velocity[0] < maxVelocity) || (Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity))
+        //Stay still if holding down both movement keys
+        if(Input.GetKey("d") && Input.GetKey("a")){
+            rigbody.AddForce(0, 0, 0);
+        }
+        //Right movement
+        else if (Input.GetKey("d") && rigbody.velocity[0] < maxVelocity)
         {
-            rigbody.AddForce(moveForce * Input.GetAxis("Horizontal"), 0, 0);
+            rigbody.AddForce(moveForce, 0, 0);
+        }
+        //Left movement
+        else if(Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity){
+            rigbody.AddForce(-moveForce, 0, 0);
         }
 
         // Dash movement 
@@ -221,7 +229,10 @@ public class AdvancedMovement : MonoBehaviour
     //Checking if player is moving based on key inputs
     private bool IsMoving()
     {
-        if (Input.GetKey("a") || Input.GetKey("d"))
+        if (Input.GetKey("a") && Input.GetKey("d")){
+            return false;
+        }
+        else if (Input.GetKey("a") || Input.GetKey("d"))
         {
             return true;
         }
