@@ -33,10 +33,15 @@ To build and play the game in Unity:
 * Open Unity3D
 * Select Open
 * Navigate to clone repository, open it and select Prototype_1
+* Go to Assets -> Scenes -> Menu.unity
+* Play
 
 To play on Windows:
 
 To play on Mac:
+* Clone the repository 
+* Extract Mac Build.zip
+* Double click Mac Build.app
 
 ## Developer files
 
