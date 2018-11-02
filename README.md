@@ -40,8 +40,8 @@ To play on Mac:
 
 ## Developer files
 
-Waseem Koya (koyawase): 
+Waseem Koya (koyawase): https://github.com/tnx21/Comp-Mddn-Game/blob/master/koyawase.md
 
-Sean Kells (kellssean): 
+Sean Kells (kellssean): https://github.com/tnx21/Comp-Mddn-Game/blob/master/kellssean.md
 
-Sean Herbert (herbersean): 
+Sean Herbert (herbersean): https://github.com/tnx21/Comp-Mddn-Game/blob/master/herbersean.md
