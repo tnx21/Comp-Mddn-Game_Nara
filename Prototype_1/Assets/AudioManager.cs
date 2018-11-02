@@ -6,8 +6,26 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;  // stores all the sounds that this audio manager will be using
 
+    public static AudioManager instance;
+    public bool game = false;
+
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (game)
+        {
+            Destroy(instance.gameObject);
+        }
+        else {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         // initializes each sound clip with 
         foreach (Sound s in sounds)
         {
