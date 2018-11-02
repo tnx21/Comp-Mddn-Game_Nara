@@ -50,6 +50,19 @@ To play on Mac:
 * Extract Mac Build.zip
 * Double click Mac Build.app
 
+## External Assets Used
+
+Along with the Unity Standard Assets, this project has used a number of assets and tools from the Unity Asset in creating the game level, these include:
+
+* [Blockout](https://assetstore.unity.com/packages/tools/level-design/blockout-100388)
+* [GameObject Brush](https://assetstore.unity.com/packages/tools/utilities/gameobject-brush-118135)
+* [GitHub for Unity](https://assetstore.unity.com/packages/tools/version-control/github-for-unity-118069)
+* [GitMerge for Unity](https://flashg.github.io/GitMerge-for-Unity/) (GPL2.0)
+* [Stones and Buried Treasure](https://assetstore.unity.com/packages/3d/environments/fantasy/stones-and-buried-treasure-95557)
+* [TextMesh Pro](https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126)
+* [Treasure Set - Free Chest](https://assetstore.unity.com/packages/3d/props/interior/treasure-set-free-chest-72345)
+* [Kino Glitch](https://github.com/keijiro/KinoGlitch)
+
 ## Developer files
 
 Waseem Koya (koyawase): https://github.com/tnx21/Comp-Mddn-Game/blob/master/koyawase.md
