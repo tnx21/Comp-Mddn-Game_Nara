@@ -36,7 +36,14 @@ To build and play the game in Unity:
 * Go to Assets -> Scenes -> Menu.unity
 * Play
 
+<b>NOTE: Some of the assets may be missing due to issues from importing blender files. If you want to play the game on windows, please follow the windows build instructions. </b>
+
 To play on Windows:
+* Clone the repository
+* Extract Windows Build.zip
+* Double click Nara.exe
+
+<b>NOTE: The Windows version is using some different assets than the Mac build because of blender importing issues. We prefer if you use the Mac build since it has all the proper assets. However, the Windows build does work properly if you do not have a Mac.</b>
 
 To play on Mac:
 * Clone the repository 
