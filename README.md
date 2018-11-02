@@ -1,5 +1,11 @@
 # Nara
 
+## Documentation Video
+
+https://www.youtube.com/watch?v=YTP4IjqR8M4&feature=youtu.be&fbclid=IwAR0jk84IUH7S5pc3v9vEiJ2Etesrn5H2hqEEKmMKdUIauPhvz5TpSsFtGxo
+
+<b>NOTE: Bad frame rate due to Sean Kells' computer. Not our games fault. </b>
+
 ## Game Loop
 
 The game starts off in the main menu. Once pressing play it takes you to the first cutscene. After the cutscene it takes you to the game. Once the game is finished, you are returned to the main menu, where you can choose to play again. At any point in time within the game, you can pause the game to then restart the game or take you back to the main menu. 
