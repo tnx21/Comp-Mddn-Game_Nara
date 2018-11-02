@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Camera movement to offset the camera depending on the direction the player is moving.
+//Currently a little buggy so sticking with original camera movement
 public class NewCameraMovement : MonoBehaviour
 {
 
