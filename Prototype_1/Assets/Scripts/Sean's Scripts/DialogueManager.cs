@@ -19,12 +19,12 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;    // sentences in dialogue
     private Queue<Dialogue> dialogueQueue;  // queue of dialogue for cutscenes (so names can change)
 
-    public SpriteRenderer naraOffSprite;
-    public SpriteRenderer kingOffSprite;
+    public SpriteRenderer naraOffSprite;    // storage of Nara sprite to be toggled on and off
+    public SpriteRenderer kingOffSprite;    // storage of The King sprite to be toggled on and off
 
     bool isCutscene = false;    // to determine if we take from the queue or not
-    public bool startScene = false;
-    public bool endScene = false;
+    public bool startScene = false; // determine if this is being used in first cutscene or not (navigation purposes mainly)
+    public bool endScene = false;   // determine if this is being used in last cutscene or not (navigation purposes mainly)
 
     // initialize queues
     void Start()
@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogue.name;  // put name into displayed dialogue box
         sentences.Clear();  // resets the dialogue box, ready for new sentences
 
+        // calls method to toggle character sprites
         if (isCutscene)
         {
             changeSpeaker(dialogue.name);
