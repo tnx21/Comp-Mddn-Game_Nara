@@ -88,14 +88,15 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(0, jumpForce, 0);
                 anim.SetTrigger("isJumping");
                 jumping = true;
+                FindObjectOfType<AudioManager>().Play("Jump_Sound");
             }
             else if (doublejump)
             {
                 rigbody.AddForce(0, jumpForce * 1.25f, 0);
                 anim.SetTrigger("isDoubleJumping");
                 doubleJumping = true;
+                FindObjectOfType<AudioManager>().Play("Jump_Sound");
             }
-            FindObjectOfType<AudioManager>().Play("Jump_Sound");
         }
 
         // ground pound movement
