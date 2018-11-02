@@ -57,7 +57,7 @@ public class AdvancedMovement : MonoBehaviour
             // resets ability to jump / double jump
             if (jumping)
             {
-                FindObjectOfType<AudioManager>().Play("Landing_Thud");
+                //FindObjectOfType<AudioManager>().Play("Landing_Thud");
                 jumping = false;
                 doubleJumping = false;
             }
@@ -88,14 +88,15 @@ public class AdvancedMovement : MonoBehaviour
                 rigbody.AddForce(0, jumpForce, 0);
                 anim.SetTrigger("isJumping");
                 jumping = true;
+                FindObjectOfType<AudioManager>().Play("Jump_Sound");
             }
             else if (doublejump)
             {
                 rigbody.AddForce(0, jumpForce * 1.25f, 0);
                 anim.SetTrigger("isDoubleJumping");
                 doubleJumping = true;
+                FindObjectOfType<AudioManager>().Play("Jump_Sound");
             }
-            FindObjectOfType<AudioManager>().Play("Jump_Sound");
         }
 
         // ground pound movement
@@ -107,10 +108,18 @@ public class AdvancedMovement : MonoBehaviour
         }
 
         // Running movement
-        //if movement key pressed and within velocity move in the correct direction
-        if ((Input.GetKey("d") && rigbody.velocity[0] < maxVelocity) || (Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity))
+        //Stay still if holding down both movement keys
+        if(Input.GetKey("d") && Input.GetKey("a")){
+            rigbody.AddForce(0, 0, 0);
+        }
+        //Right movement
+        else if (Input.GetKey("d") && rigbody.velocity[0] < maxVelocity)
         {
-            rigbody.AddForce(moveForce * Input.GetAxis("Horizontal"), 0, 0);
+            rigbody.AddForce(moveForce, 0, 0);
+        }
+        //Left movement
+        else if(Input.GetKey("a") && rigbody.velocity[0] > -maxVelocity){
+            rigbody.AddForce(-moveForce, 0, 0);
         }
 
         // Dash movement 
@@ -143,11 +152,11 @@ public class AdvancedMovement : MonoBehaviour
         //Rotating the player in the direction they are moving
         Quaternion right = Quaternion.Euler(0f, 0f, 0f);
         Quaternion left = Quaternion.Euler(0f, 180f, 0f);
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && !Input.GetKey("d"))
         {
             transform.rotation = Quaternion.Lerp(right, left, Time.time * 3);
         }
-        else if (Input.GetKey("d"))
+        else if (Input.GetKey("d") && !Input.GetKey("a"))
         {
             transform.rotation = Quaternion.Lerp(left, right, Time.time * 3);
         }
@@ -190,13 +199,13 @@ public class AdvancedMovement : MonoBehaviour
         switch (s)
         {
             case "DoubleJump":
-                doublejump = !doublejump;
+                doublejump = true;
                 break;
             case "Dash":
-                dash = !dash;
+                dash = true;
                 break;
             case "GroundSlam":
-                groundslam = !groundslam;
+                groundslam = true;
                 break;
             default:
                 Debug.Log("No ability found for pickup: " + s);
@@ -221,7 +230,10 @@ public class AdvancedMovement : MonoBehaviour
     //Checking if player is moving based on key inputs
     private bool IsMoving()
     {
-        if (Input.GetKey("a") || Input.GetKey("d"))
+        if (Input.GetKey("a") && Input.GetKey("d")){
+            return false;
+        }
+        else if (Input.GetKey("a") || Input.GetKey("d"))
         {
             return true;
         }
