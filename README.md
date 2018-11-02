@@ -62,6 +62,9 @@ Along with the Unity Standard Assets, this project has used a number of assets a
 * [TextMesh Pro](https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126)
 * [Treasure Set - Free Chest](https://assetstore.unity.com/packages/3d/props/interior/treasure-set-free-chest-72345)
 * [Kino Glitch](https://github.com/keijiro/KinoGlitch)
+* [Menu song](https://soundimage.org/fantasywonder/)
+* [Game song: Marcos H. Bolanos The Dream](http://freemusicarchive.org/member/AJStetson/Atmospheric_Magical_Expansive_Fantasy)
+* [Other various sounds](https://freesound.org/people/tnx21/downloaded_sounds/)
 
 ## Developer files
 
