@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Navigating the pause menu with the use of ESC
 public class PauseMenu : MonoBehaviour {
 
     public static bool isPaused = false;

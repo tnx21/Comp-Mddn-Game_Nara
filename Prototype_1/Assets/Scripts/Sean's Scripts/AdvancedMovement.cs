@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Handling player movement and animations
 public class AdvancedMovement : MonoBehaviour
 {
 

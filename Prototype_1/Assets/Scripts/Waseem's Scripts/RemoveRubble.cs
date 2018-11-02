@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Removing rubble blocking mine when triggering with alter collider
 public class RemoveRubble : MonoBehaviour {
 
     public GameObject rubble;

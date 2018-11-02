@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Shaking camera when hitting trigger
+//Using kino glitch library to help with this
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] Camera playerCamera;
@@ -9,6 +11,7 @@ public class CameraShake : MonoBehaviour
 
     public void Update()
     {
+        //Only shake once the trigger has been activated
         if (shaking)
         {
             Shake();
@@ -30,6 +33,7 @@ public class CameraShake : MonoBehaviour
 
     IEnumerator disableGlitch(Kino.AnalogGlitch glitch)
     {
+        //Shake camera for 2 seconds
         yield return new WaitForSeconds(2.0f);
         glitch.enabled = false;
         shaking = false;

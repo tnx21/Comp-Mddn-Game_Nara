@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Used to attach the player to moving platforms
 public class AttachPlayer : MonoBehaviour
 {
 
@@ -12,7 +13,7 @@ public class AttachPlayer : MonoBehaviour
     {
         if (other.gameObject == Player)
         {
-            Debug.Log("ENTERED");
+            //Set player position to that of moving platform
             Player.transform.parent = this.transform.parent;
         }
     }

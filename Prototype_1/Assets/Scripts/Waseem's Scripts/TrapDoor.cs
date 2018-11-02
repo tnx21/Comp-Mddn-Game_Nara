@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Triggering trap door animation
 public class TrapDoor : MonoBehaviour
 {
 
@@ -11,6 +12,7 @@ public class TrapDoor : MonoBehaviour
     {
         if (anim != null)
         {
+            //Play the trapdoor amimation when hitting trigger
             anim.Play("Trapdoor");
         }
     }

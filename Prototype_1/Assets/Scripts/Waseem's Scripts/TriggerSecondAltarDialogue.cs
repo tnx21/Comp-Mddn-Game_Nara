@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Setting dialogue colliders at altar
 public class UpdateAlterTrigger : MonoBehaviour {
 
     public GameObject firstAlterTrigger;

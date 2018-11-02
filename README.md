@@ -1,5 +1,11 @@
 # Nara
 
+## Documentation Video
+
+https://www.youtube.com/watch?v=YTP4IjqR8M4&feature=youtu.be&fbclid=IwAR0jk84IUH7S5pc3v9vEiJ2Etesrn5H2hqEEKmMKdUIauPhvz5TpSsFtGxo
+
+<b>NOTE: Bad frame rate due to Sean Kells' computer. Not our games fault. </b>
+
 ## Game Loop
 
 The game starts off in the main menu. Once pressing play it takes you to the first cutscene. After the cutscene it takes you to the game. Once the game is finished, you are returned to the main menu, where you can choose to play again. At any point in time within the game, you can pause the game to then restart the game or take you back to the main menu. 
@@ -36,12 +42,35 @@ To build and play the game in Unity:
 * Go to Assets -> Scenes -> Menu.unity
 * Play
 
+<b>NOTE: Some of the assets may be missing due to issues from importing blender files. If you want to play the game on windows, please follow the windows build instructions. </b>
+
 To play on Windows:
+* Clone the repository
+* Extract Windows Build.zip
+* Double click Nara.exe
+
+<b>NOTE: The Windows version is using some different assets than the Mac build because of blender importing issues. We prefer if you use the Mac build since it has all the proper assets. However, the Windows build does work properly if you do not have a Mac.</b>
 
 To play on Mac:
 * Clone the repository 
 * Extract Mac Build.zip
 * Double click Mac Build.app
+
+## External Assets Used
+
+Along with the Unity Standard Assets, this project has used a number of assets and tools from the Unity Asset in creating the game level, these include:
+
+* [Blockout](https://assetstore.unity.com/packages/tools/level-design/blockout-100388)
+* [GameObject Brush](https://assetstore.unity.com/packages/tools/utilities/gameobject-brush-118135)
+* [GitHub for Unity](https://assetstore.unity.com/packages/tools/version-control/github-for-unity-118069)
+* [GitMerge for Unity](https://flashg.github.io/GitMerge-for-Unity/) (GPL2.0)
+* [Stones and Buried Treasure](https://assetstore.unity.com/packages/3d/environments/fantasy/stones-and-buried-treasure-95557)
+* [TextMesh Pro](https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126)
+* [Treasure Set - Free Chest](https://assetstore.unity.com/packages/3d/props/interior/treasure-set-free-chest-72345)
+* [Kino Glitch](https://github.com/keijiro/KinoGlitch)
+* [Menu song](https://soundimage.org/fantasywonder/)
+* [Game song: Marcos H. Bolanos The Dream](http://freemusicarchive.org/member/AJStetson/Atmospheric_Magical_Expansive_Fantasy)
+* [Other various sounds](https://freesound.org/people/tnx21/downloaded_sounds/)
 
 ## Developer files
 
