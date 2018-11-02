@@ -152,11 +152,11 @@ public class AdvancedMovement : MonoBehaviour
         //Rotating the player in the direction they are moving
         Quaternion right = Quaternion.Euler(0f, 0f, 0f);
         Quaternion left = Quaternion.Euler(0f, 180f, 0f);
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && !Input.GetKey("d"))
         {
             transform.rotation = Quaternion.Lerp(right, left, Time.time * 3);
         }
-        else if (Input.GetKey("d"))
+        else if (Input.GetKey("d") && !Input.GetKey("a"))
         {
             transform.rotation = Quaternion.Lerp(left, right, Time.time * 3);
         }
