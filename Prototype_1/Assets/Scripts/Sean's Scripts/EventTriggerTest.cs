@@ -2,12 +2,18 @@
 using System.Collections;
 
 public class EventTriggerTest : MonoBehaviour
-{
 
-    // Update is called once per frame
+/*
+ * 
+ * Code for testing the EventManager, no longer used in the main game
+ * 
+ */
+
+{
     void Update()
     {
-        if(Input.GetKeyDown ("q")){
+        if (Input.GetKeyDown("q"))
+        {
             EventManager.TriggerEvent("test");
         }
     }

@@ -2,6 +2,13 @@
 using UnityEngine.Events;
 
 public class EMTest : MonoBehaviour
+
+/*
+ * 
+ * Code for testing the EventManager, no longer used in the main game
+ * 
+ */
+
 {
     private UnityAction someListener;
 
@@ -20,7 +27,7 @@ public class EMTest : MonoBehaviour
         EventManager.StopListening("test", someListener);
     }
 
-    void SomeFunction ()
+    void SomeFunction()
     {
         Debug.Log("SomeFunction was called");
     }

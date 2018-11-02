@@ -193,7 +193,7 @@ public class AdvancedMovement : MonoBehaviour
         }
     }
 
-    //Activating skills with pickups
+    //Toggle skill booleans upon entering associated pickup collider, see PickupHandler.cs for full expln.
     public void toggleSkill(string s)
     {
         switch (s)
