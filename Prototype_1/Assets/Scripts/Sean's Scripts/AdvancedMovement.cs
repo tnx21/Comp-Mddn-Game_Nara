@@ -57,7 +57,7 @@ public class AdvancedMovement : MonoBehaviour
             // resets ability to jump / double jump
             if (jumping)
             {
-                FindObjectOfType<AudioManager>().Play("Landing_Thud");
+                //FindObjectOfType<AudioManager>().Play("Landing_Thud");
                 jumping = false;
                 doubleJumping = false;
             }
@@ -199,13 +199,13 @@ public class AdvancedMovement : MonoBehaviour
         switch (s)
         {
             case "DoubleJump":
-                doublejump = !doublejump;
+                doublejump = true;
                 break;
             case "Dash":
-                dash = !dash;
+                dash = true;
                 break;
             case "GroundSlam":
-                groundslam = !groundslam;
+                groundslam = true;
                 break;
             default:
                 Debug.Log("No ability found for pickup: " + s);
