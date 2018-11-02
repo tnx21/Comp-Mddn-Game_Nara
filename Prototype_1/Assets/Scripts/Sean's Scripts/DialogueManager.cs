@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     public SpriteRenderer kingOffSprite;
 
     bool isCutscene = false;    // to determine if we take from the queue or not
+    public bool startScene = false;
+    public bool endScene = false;
 
     // initialize queues
     void Start()
@@ -42,7 +44,8 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogue.name;  // put name into displayed dialogue box
         sentences.Clear();  // resets the dialogue box, ready for new sentences
 
-        if (isCutscene) {
+        if (isCutscene)
+        {
             changeSpeaker(dialogue.name);
         }
 
@@ -103,31 +106,36 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 isCutscene = false; // cutscene finished, stop from checking queue
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // transition from cutscene to next scene
+                if (startScene)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // transition from start cutscene to the game
+                }
+                else if (endScene)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);   // transition from end cutscene to main screen
+                }
             }
         }
         else if (isFinalDialogue)
         {
-            StartCoroutine(ReturnToMenu()); // game over, call method to take us back to main menu
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // transition from end game to end cutscene
         }
     }
 
-    private void changeSpeaker(string name) {
+    // turns sprites on based on who is talking
+    private void changeSpeaker(string name)
+    {
+        // Nara is talking, turn on kings grey sprite
         if (name.Equals("Nara") && naraOffSprite != null && kingOffSprite != null)
         {
             naraOffSprite.enabled = false;
             kingOffSprite.enabled = true;
         }
-        else if (name.Equals("King") && naraOffSprite != null && kingOffSprite != null) {
+        // The King is talking, turn on Nara's grey sprite
+        else if (name.Equals("King") && naraOffSprite != null && kingOffSprite != null)
+        {
             naraOffSprite.enabled = true;
             kingOffSprite.enabled = false;
         }
-    }
-    
-    // returns the scene back to the main menu
-    private IEnumerator ReturnToMenu()
-    {
-        yield return new WaitForSeconds(2); // delay before scene change
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2); // navigate back to menu
     }
 }
