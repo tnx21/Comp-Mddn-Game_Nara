@@ -7,11 +7,11 @@
 
 Task | Contribution 
 ------- | ---------
-	Dialogue | All
-	DialogueTrigger | All
-	DialogueManager | All
-	Sound | All	( Prototype_1 > Assets > Audio )
-	AudioManager | All	( Prototype_1 > Assets )
+Dialogue | All
+DialogueTrigger | All
+DialogueManager | All
+Sound | All	( Prototype_1 > Assets > Audio )
+AudioManager | All	( Prototype_1 > Assets )
   
 ### Most interesting code I worked on:
 
