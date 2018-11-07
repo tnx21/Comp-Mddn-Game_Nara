@@ -37,6 +37,10 @@ This section of code is my most interesting, as it allows for us as developers t
 
 ### Learning Reflection
 
-Perhaps most useful to me through this half trimester has been the experience of managing a multidiciplinary team
+Perhaps most useful to me through this half trimester has been the experience of managing a multidiciplinary team. While not easy, and perhaps not properly done, I have gained useful insight into working in an iterative fashion with a mix of both programmers and designers, and how to best manage team work in order to meet project objectives.
 
-In terms of programming skill, I am now comfortable working with C#, scripts, and more game related issues such as 
+In terms of programming skill, I am now comfortable working with C#, scripts, and more Unity related issues such as how to change attributes of a prefab at runtime by script. I have also had the chance to work with level design in the Unity engine, and how to use Unity's prefab system to create powerful templates for game objects.
+
+My biggest takeaway from working in Unity in terms of programming is how to interact between scripts. The fact that this is a possibility, and that scripts can either be referenced by each other, or script methods globally by the use of an event manager has opened the door to a large amount of more complex and interesting mechanical interactions in gameplay.
+
+
