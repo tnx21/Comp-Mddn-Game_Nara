@@ -5,9 +5,10 @@
 ##### Animal Role: Bear
 ##### Primary Role: Project Ownership, Team Leader
 
-<br>
+<br>---
 
 ### Code Discussion:
+---
 
 For this project, I have been involved in the following areas of code
 
@@ -36,6 +37,7 @@ For the Respawner, I wrote the original code, prepared a test scene, and created
 This section of code is my most interesting, as it allows for us as developers to create an interesting gameplay loop, wherein players can attempt a section multiple times, and upon failing, are only reverted to their most recent MainSpawn, rather than to the beginning of the game. This reduces the risk of experimentation and exploring while not entirely removing consequence, leading to interesting challenge for the player. 
 
 ### Learning Reflection
+---
 
 Perhaps most useful to me through this half trimester has been the experience of managing a multidiciplinary team. While not easy, and perhaps not properly done, I have gained useful insight into working in an iterative fashion with a mix of both programmers and designers, and how to best manage team work in order to meet project objectives.
 
