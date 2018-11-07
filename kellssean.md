@@ -35,6 +35,7 @@ For the Respawner, I wrote the original code, prepared a test scene, and created
 
 This section of code is my most interesting, as it allows for us as developers to create an interesting gameplay loop, wherein players can attempt a section multiple times, and upon failing, are only reverted to their most recent MainSpawn, rather than to the beginning of the game. This reduces the risk of experimentation and exploring while not entirely removing consequence, leading to interesting challenge for the player. 
 
+---
 ### Learning Reflection
 ---
 
