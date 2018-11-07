@@ -13,7 +13,7 @@ For this project, I have been involved in the following areas of code
 
 [AdvancedMovement.cs](https://github.com/tnx21/Comp-Mddn-Game_Nara/blob/master/Prototype_1/Assets/Scripts/Sean's%20Scripts/AdvancedMovement.cs) | [SOME] :
 
-For the AdvancedMovement, I have been responsible for adding initial code that would allow for the player to pick up objects, and have those pickups affect player abilities. I also had a small part in refactoring this code.
+For the AdvancedMovement, I have been responsible for adding initial code that would allow for the player to pick up objects, necessary to work with PickupHandler.cs, and have those pickups affect player abilities. I also had a small part in refactoring this code.
 
 [LeafRandomiser.cs](https://github.com/tnx21/Comp-Mddn-Game_Nara/blob/master/Prototype_1/Assets/Prefabs/Terrain/Trees/LeafRandomiser.cs) | [ALL] :
 
@@ -42,5 +42,7 @@ Perhaps most useful to me through this half trimester has been the experience of
 In terms of programming skill, I am now comfortable working with C#, scripts, and more Unity related issues such as how to change attributes of a prefab at runtime by script. I have also had the chance to work with level design in the Unity engine, and how to use Unity's prefab system to create powerful templates for game objects.
 
 My biggest takeaway from working in Unity in terms of programming is how to interact between scripts. The fact that this is a possibility, and that scripts can either be referenced by each other, or script methods globally by the use of an event manager has opened the door to a large amount of more complex and interesting mechanical interactions in gameplay.
+
+In future, I would like to continue exploring the differences in event managers, the difference between a method call and a method invoke in C#, as well as looking into alternative ways to invoke methods with passed parameters, as I am sure there is a more eloquent way to do it than a straight script reference.
 
 
