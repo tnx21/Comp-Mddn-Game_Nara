@@ -5,8 +5,7 @@
 ##### Animal Role: Bear
 ##### Primary Role: Project Ownership, Team Leader
 
-<br>---
-
+---
 ### Code Discussion:
 ---
 
